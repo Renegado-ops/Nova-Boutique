@@ -1,4 +1,4 @@
-import { Product } from '../types/product';
+import type { Product } from '../types/product';
 
 interface ProductModalProps {
   product: Product | null;
@@ -33,7 +33,9 @@ export const ProductModal = ({
             <span className="text-xs font-extrabold text-slate-400 uppercase">
               {product.brand}
             </span>
-            <h4 className="text-sm font-bold text-slate-900">{product.name}</h4>
+            <h4 className="text-sm font-bold text-slate-900">
+              {product.name}
+            </h4>
             <div className="flex items-baseline gap-2 pt-1">
               <span className="text-lg font-extrabold text-red-700">
                 ${product.price} USD

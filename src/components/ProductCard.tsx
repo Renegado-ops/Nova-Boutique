@@ -1,4 +1,4 @@
-import { Product } from '../types/product';
+import type { Product } from '../types/product';
 
 interface ProductCardProps {
   product: Product;
@@ -8,7 +8,7 @@ interface ProductCardProps {
 export const ProductCard = ({ product, onSelect }: ProductCardProps) => {
   return (
     <div
-      className="bg-white border border-slate-300 rounded-lg overflow-hidden shadow-sm flex flex-col justify-between hover:border-red-600 transition-all cursor-pointer"
+      className="bg-white border border-slate-300 rounded-lg overflow-hidden shadow-sm flex flex-col justify-between hover:border-red-600 transition-all cursor-pointer group"
       onClick={() => onSelect(product)}
     >
       <div>
@@ -16,7 +16,7 @@ export const ProductCard = ({ product, onSelect }: ProductCardProps) => {
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
           {product.badge && (
             <span className="absolute top-2 left-2 bg-red-700 text-white font-extrabold text-[9px] uppercase px-2 py-0.5 rounded">

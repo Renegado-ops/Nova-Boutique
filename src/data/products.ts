@@ -1,4 +1,4 @@
-import { Product } from '../types/product';
+import type { Product } from '../types/product';
 
 export const PRODUCTS: Product[] = [
   {
@@ -8,8 +8,7 @@ export const PRODUCTS: Product[] = [
     category: 'Mujer',
     price: 39.99,
     compareAtPrice: 110.0,
-    image:
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80',
     badge: 'NUEVO',
   },
   {
@@ -19,8 +18,7 @@ export const PRODUCTS: Product[] = [
     category: 'Mujer',
     price: 59.99,
     compareAtPrice: 160.0,
-    image:
-      'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&auto=format&fit=crop&q=80',
     badge: 'MÁS VENDIDO',
   },
   {
@@ -30,8 +28,7 @@ export const PRODUCTS: Product[] = [
     category: 'Accesorios',
     price: 19.99,
     compareAtPrice: 55.0,
-    image:
-      'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&auto=format&fit=crop&q=80',
   },
   {
     id: 4,
@@ -40,8 +37,7 @@ export const PRODUCTS: Product[] = [
     category: 'Carteras',
     price: 69.99,
     compareAtPrice: 195.0,
-    image:
-      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&auto=format&fit=crop&q=80',
     badge: 'CLEARANCE',
   },
   {
@@ -51,8 +47,7 @@ export const PRODUCTS: Product[] = [
     category: 'Calzado',
     price: 34.99,
     compareAtPrice: 90.0,
-    image:
-      'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&auto=format&fit=crop&q=80',
   },
   {
     id: 6,
@@ -61,7 +56,25 @@ export const PRODUCTS: Product[] = [
     category: 'Mujer',
     price: 22.99,
     compareAtPrice: 65.0,
-    image:
-      'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 7,
+    name: 'Perfume Floral Luxe Eau de Parfum',
+    brand: 'GUCCI BEAUTY',
+    category: 'Accesorios',
+    price: 49.99,
+    compareAtPrice: 120.0,
+    image: 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&auto=format&fit=crop&q=80',
+    badge: 'NUEVO',
+  },
+  {
+    id: 8,
+    name: 'Reloj Chronograph Gold',
+    brand: 'MICHAEL KORS',
+    category: 'Accesorios',
+    price: 79.99,
+    compareAtPrice: 225.0,
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&auto=format&fit=crop&q=80',
   },
 ];

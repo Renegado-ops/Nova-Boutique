@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import { Product } from './types/product';
+import type { Product } from './types/product';
 import { PRODUCTS } from './data/products';
 import { Navbar } from './components/Navbar';
 import { ProductCard } from './components/ProductCard';
 import { ProductModal } from './components/ProductModal';
+import { RunwaySection } from './components/RunwaySection';
+import { CategoryGrid } from './components/CategoryGrid';
+import { Footer } from './components/Footer';
 
 export function App() {
   const [selectedCategory, setSelectedCategory] = useState<string>('TODOS');
@@ -43,22 +46,11 @@ export function App() {
         onSelectCategory={setSelectedCategory}
       />
 
-      <section className="max-w-7xl mx-auto px-4 py-6">
-        <div className="bg-slate-900 text-white rounded-lg p-8 md:p-12 text-center space-y-3 border border-slate-800 shadow-md">
-          <span className="bg-red-700 text-white text-[10px] font-extrabold tracking-widest px-3 py-1 rounded uppercase">
-            HASTA 60% MENOS QUE OTRAS TIENDAS
-          </span>
-          <h2 className="text-2xl md:text-4xl font-extrabold uppercase tracking-tight">
-            GRANDES MARCAS. PRECIOS INCREÍBLES.
-          </h2>
-          <p className="text-xs text-slate-300 max-w-xl mx-auto">
-            Selección exclusiva de moda internacional directa para República
-            Dominicana.
-          </p>
-        </div>
-      </section>
+      {/* BANNER VISUAL DE CATEGORÍAS */}
+      <CategoryGrid onSelectCategory={setSelectedCategory} />
 
-      <main className="max-w-7xl mx-auto px-4 pb-16">
+      {/* CATÁLOGO DE PRODUCTOS */}
+      <main className="max-w-7xl mx-auto px-4 pb-8">
         <div className="flex justify-between items-center mb-6 border-b border-slate-300 pb-2">
           <h3 className="text-lg font-extrabold text-slate-900 uppercase">
             {selectedCategory}{' '}
@@ -85,20 +77,22 @@ export function App() {
         </div>
       </main>
 
+      {/* SECCIÓN THE RUNWAY */}
+      <RunwaySection
+        onSelectProduct={(prod) => {
+          setActiveProduct(prod);
+          setCartCount((c) => c + 1);
+        }}
+      />
+
       <ProductModal
         product={activeProduct}
         onClose={() => setActiveProduct(null)}
         onWhatsAppOrder={handleWhatsAppOrder}
       />
 
-      <footer className="bg-slate-900 text-slate-400 text-xs py-8 text-center border-t border-slate-800 space-y-2">
-        <p className="font-bold text-white">
-          NOVA BOUTIQUE — PROYECTO DEMO EMD
-        </p>
-        <p className="text-[11px]">
-          Desarrollado para exhibición de catálogos e-commerce.
-        </p>
-      </footer>
+      {/* NUEVO FOOTER COMPLETO ESTILO TJMAXX */}
+      <Footer />
     </div>
   );
 }
