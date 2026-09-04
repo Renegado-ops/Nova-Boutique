@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NOVA Boutique — Retail Catalog</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              red: {
+                400: '#9ebcd4',
+                500: '#8baecb',
+                600: '#79a3c3', /* Azul Chambray Principal */
+                700: '#5e8ba2', /* Chambray Oscuro */
+                800: '#487188',
+                900: '#34576e',
+              },
+              slate: {
+                100: '#f8f4ef', /* Beige Cálido Fondo */
+                200: '#ede6dd', /* Beige Cálido Borde */
+              }
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

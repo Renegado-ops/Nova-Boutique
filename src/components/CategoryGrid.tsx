@@ -37,8 +37,9 @@ interface CategoryTile {
                 alt={tile.name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
+              {/* Píldora en Espresso */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-auto">
-                <span className="bg-white text-red-600 font-extrabold text-xs md:text-sm px-6 py-2 rounded-full shadow-md whitespace-nowrap lowercase tracking-tight group-hover:bg-red-600 group-hover:text-white transition-colors duration-200 block text-center">
+                <span className="bg-white text-[#3a2119] font-extrabold text-xs md:text-sm px-6 py-2 rounded-full shadow-md whitespace-nowrap lowercase tracking-tight group-hover:bg-[#3a2119] group-hover:text-white transition-colors duration-200 block text-center">
                   {tile.name}
                 </span>
               </div>
