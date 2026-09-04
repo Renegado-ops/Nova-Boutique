@@ -13,15 +13,6 @@ export function App() {
   const [cartCount, setCartCount] = useState<number>(0);
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
 
-  const categories = [
-    'TODOS',
-    'MUJER',
-    'CARTERAS',
-    'CALZADO',
-    'ACCESORIOS',
-    'CLEARANCE',
-  ];
-
   const filteredProducts =
     selectedCategory === 'TODOS'
       ? PRODUCTS
@@ -41,7 +32,6 @@ export function App() {
     <div className="min-h-screen bg-slate-100 text-slate-900 font-sans">
       <Navbar
         cartCount={cartCount}
-        categories={categories}
         selectedCategory={selectedCategory}
         onSelectCategory={setSelectedCategory}
       />
@@ -91,7 +81,7 @@ export function App() {
         onWhatsAppOrder={handleWhatsAppOrder}
       />
 
-      {/* NUEVO FOOTER COMPLETO ESTILO TJMAXX */}
+      {/* FOOTER */}
       <Footer />
     </div>
   );

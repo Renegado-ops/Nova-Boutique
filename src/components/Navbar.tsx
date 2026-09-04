@@ -1,23 +1,19 @@
 interface NavbarProps {
   cartCount: number;
-  categories: string[];
   selectedCategory: string;
   onSelectCategory: (cat: string) => void;
 }
 
 export const Navbar = ({
   cartCount,
-  categories,
   selectedCategory,
   onSelectCategory,
 }: NavbarProps) => {
   return (
     <header className="bg-white font-sans border-b border-gray-200">
-      {/* 1. BARRA DE MARCAS ASOCIADAS E ÍCONOS DE UTILIDAD (Fondo Blanco) */}
+      {/* 1. BARRA DE MARCAS ASOCIADAS E ÍCONOS DE UTILIDAD */}
       <div className="border-b border-gray-200 py-2 px-4 md:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-xs text-slate-800">
-          
-          {/* Marcas de la familia (Izquierda) */}
           <div className="flex items-center gap-3 md:gap-5 font-extrabold text-sm tracking-tight">
             <span className="text-red-600 text-base italic font-black cursor-pointer">NOVA</span>
             <span className="text-blue-800 cursor-pointer hover:opacity-80">MARSHALLS</span>
@@ -26,7 +22,6 @@ export const Navbar = ({
             <span className="bg-emerald-700 text-white text-[10px] px-1.5 py-0.5 font-bold cursor-pointer">HOMESENSE</span>
           </div>
 
-          {/* Enlaces de Utilidad con Íconos Lineales Rojos (Derecha) */}
           <div className="flex items-center gap-4 md:gap-6 text-[13px] font-normal text-slate-800">
             <button className="flex items-center gap-1.5 hover:text-red-600 transition-colors cursor-pointer">
               <span>tiendas</span>
@@ -71,14 +66,11 @@ export const Navbar = ({
               </div>
             </button>
           </div>
-
         </div>
       </div>
 
-      {/* 2. ÁREA CENTRAL: LOGO CENTRADO GIGANTE + BUSCADOR OVALADO A LA DERECHA */}
+      {/* 2. ÁREA CENTRAL: LOGO CENTRADO + BUSCADOR OVALADO */}
       <div className="max-w-7xl mx-auto px-4 py-5 flex items-center justify-between relative">
-        
-        {/* Logo Centrado Estilo T.J.Maxx */}
         <div className="w-full text-center">
           <h1 className="text-5xl md:text-6xl font-black text-red-600 tracking-tighter italic inline-block cursor-pointer select-none">
             NOVA<span className="text-red-600 font-extrabold not-italic text-4xl">.boutique</span>
@@ -86,7 +78,6 @@ export const Navbar = ({
           </h1>
         </div>
 
-        {/* Buscador Ovalado a la Derecha */}
         <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden md:block w-72">
           <div className="relative flex items-center">
             <input
@@ -101,10 +92,9 @@ export const Navbar = ({
             </button>
           </div>
         </div>
-
       </div>
 
-      {/* 3. MENÚ DE DEPARTAMENTOS EN MINÚSCULAS CENTRADO */}
+      {/* 3. MENÚ DE DEPARTAMENTOS */}
       <nav className="border-t border-gray-100 py-3">
         <div className="max-w-7xl mx-auto px-4 flex justify-center items-center gap-6 md:gap-8 overflow-x-auto whitespace-nowrap text-sm font-bold lowercase tracking-tight">
           <button 
@@ -170,11 +160,10 @@ export const Navbar = ({
         </div>
       </nav>
 
-      {/* 4. CINTILLA PROMO GRIS CLARO DEBAJO DEL MENÚ (#eeeeee) */}
+      {/* 4. CINTILLA PROMO */}
       <div className="bg-[#eeeeee] py-2.5 px-4 text-center text-xs md:text-sm text-slate-900 border-t border-b border-gray-300 font-normal">
         <span className="font-bold">envío gratis</span> en pedidos de $89+ usa el código <span className="font-bold">ship89</span> | devoluciones gratis en tu tienda local | <a href="#" className="underline font-normal hover:text-red-600">ver detalles &gt;</a>
       </div>
-
     </header>
   );
 };
